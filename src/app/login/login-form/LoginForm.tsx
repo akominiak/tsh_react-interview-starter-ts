@@ -7,23 +7,25 @@ export class LoginForm extends Component {
 
     render() {
         return (
-            <form>
-                <div>
-                    <label>
-                        Username
-            <input name="username" />
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Password
-            <input name="password" type="password" />
-                    </label>
-                </div>
-                <button className="btn normal-blue" type="submit">Log In</button>
-                <a href="#">Forgot password?</a>
-            </form>
-
+            <div className="form">
+                <h2>Login</h2>
+                <form>
+                    <div>
+                        <label>
+                            Username
+            <input name="username" placeholder="Enter username" />
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            Password
+            <input name="password" type="password" placeholder="Enter password" />
+                        </label>
+                    </div>
+                    <button className="btn normal-blue" type="submit">Log In</button>
+                    <a href="#">Forgot password?</a>
+                </form>
+            </div>
         )
     }
 }

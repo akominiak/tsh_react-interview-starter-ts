@@ -6,7 +6,9 @@ import "./Header.scss";
 export const Header = () => {
     return (
         <header>
-            <div className="logo">join.tsh.io</div>
+            <Link to={AppRoute.home}>
+                <div className="logo">join.tsh.io</div>
+            </Link>
         </header>
     );
 };

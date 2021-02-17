@@ -10,8 +10,6 @@ export const Login = () => {
   return (
     <>
       <Header />
-      <Link to={AppRoute.home}>Products page</Link>
-      <h2>Login</h2>
       <LoginForm />
     </>
   );
