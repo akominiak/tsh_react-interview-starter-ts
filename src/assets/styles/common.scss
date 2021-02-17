@@ -1,0 +1,52 @@
+@import '../styles/variables.scss';
+
+//Logo 
+.logo {
+    font-family: 'Nunito';
+    font-size: 24px;
+    line-height: 40px;
+    color: $black;
+}
+//Buttons
+.btn {
+    border-radius:  4px;
+    font-family: 'Nunito';
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    &.normal-blue {
+        background-color: $light-blue;
+        color: $white;
+        border: none;
+        &:hover {
+            background-color: $blue;
+        }
+    }
+    &.normal-white {
+        background-color: $white;
+        border: 1px solid $light-blue;
+        color: $light-blue;
+        &:hover {
+            background-color: $blue;
+            border: 1px solid $blue;
+        }
+    }
+    &.disabled {
+        background-color: $dark-gray;
+        color: $white;
+    }
+    &.disabled-white {
+        background-color: $white;
+        color: $dark-gray;
+        border: 1px solid $dark-gray;
+    }
+}
+
+//Search 
+
+//Dropdown
+
+//Checkboxes
+
+//Spinner
+
