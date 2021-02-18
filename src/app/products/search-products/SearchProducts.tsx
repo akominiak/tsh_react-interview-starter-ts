@@ -8,15 +8,17 @@ import "./SearchProducts.scss";
 export class SearchProducts extends Component {
     render() {
         return (
-            <form>
-                <div>
-                    <input type="text" placeholder="Search" />
-                </div>
-                <div className="checkboxes">
-                    <input type="checkbox" name="Active" />
-                    <input type="checkbox" name="Promo" />
-                </div>
-            </form>
+            <div className="container">
+                <form>
+                    <div>
+                        <input type="text" placeholder="Search" />
+                    </div>
+                    <div className="checkboxes">
+                        <input type="checkbox" name="Active" />
+                        <input type="checkbox" name="Promo" />
+                    </div>
+                </form>
+            </div>
         )
     }
 };

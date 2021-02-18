@@ -6,6 +6,8 @@ import { AppProviders } from 'providers/AppProviders';
 import { App } from './app/App';
 import * as serviceWorker from './serviceWorker';
 
+import "./index.scss";
+
 ReactDOM.render(
   <AppProviders>
     <App />

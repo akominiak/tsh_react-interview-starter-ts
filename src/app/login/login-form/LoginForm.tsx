@@ -7,7 +7,7 @@ export class LoginForm extends Component {
 
     render() {
         return (
-            <div className="form">
+            <div className="form container">
                 <h2>Login</h2>
                 <form>
                     <div>

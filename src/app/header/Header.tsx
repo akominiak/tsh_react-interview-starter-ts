@@ -5,7 +5,7 @@ import "./Header.scss";
 
 export const Header = () => {
     return (
-        <header>
+        <header className="container">
             <Link to={AppRoute.home}>
                 <div className="logo">join.tsh.io</div>
             </Link>
