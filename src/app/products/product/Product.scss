@@ -1,2 +1,44 @@
 @import '../../../assets/styles/variables.scss';
 @import '../../../assets/styles/common.scss';
+.item {
+    border-radius: 8px;
+    background-color: $white;
+    .img-container {
+        position: relative;
+        width:100%;
+        img {
+            width:100%;
+            border-radius: 8px 8px 0 0;
+        }
+        .promo {
+            position: absolute;
+            top: 20px;
+            left:0;
+            width: 75px;
+            height: 24px;
+            color: $white;
+            background-color: $orange;
+            text-align: center;
+        }
+    }
+    .desc-container {
+        padding: 0 16px 24px;
+        p {
+            font-size: 14px;
+            margin: 8px 0;
+            height: 64px;
+        }
+
+        .ratio {
+            display: flex;
+            justify-content: space-between;
+            margin: 18px 0;
+            width: 38%;
+        }
+
+        button {
+            width: 100%;
+            line-height: 38px;
+        }
+    }
+}
