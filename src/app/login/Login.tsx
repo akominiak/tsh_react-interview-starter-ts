@@ -9,7 +9,7 @@ import "./Login.scss";
 export const Login = () => {
   return (
     <>
-      <Header />
+      <Header isLoginPage={true} />
       <LoginForm />
     </>
   );

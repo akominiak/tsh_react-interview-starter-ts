@@ -1,3 +1,55 @@
 @import '../../../assets/styles/variables.scss';
 @import '../../../assets/styles/common.scss';
 
+.search-bar {
+    background-color: $white;
+    form {
+        .input-search {
+            position: relative;
+            width:100%;
+            border: 1px solid $light-gray;
+            border-radius: 8px;
+            margin:0 0 24px;
+            input {
+                width: 90%;
+                border: none;
+                padding: 16px;
+                font-size: 14px;
+                line-height: 16px;
+                outline: none;
+            }
+            .search-icom {
+                position: absolute;
+                right: 5%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        .checkboxes {
+            padding: 0 0 32px; 
+            label {
+                 margin-right: 32px;
+                 font-size: 14px;
+                 input {
+                     margin-right: 8px;
+                     &.custom-chckbx {
+                        appearance: none;
+                        display: inline-block;
+                        position: relative;
+                        padding: 11px;
+                        border: 1px solid $light-gray;
+                        border-radius: 4px;
+                        &:checked {
+                            background-color: $blue;
+                            border: 1px solid $blue;
+                            content: url('../../../assets/icons/check.svg');
+                            width: 24px;
+                            height: 24px;
+                            padding: 4px;
+                        }
+                     }
+                 }
+            }
+        }
+    }
+}

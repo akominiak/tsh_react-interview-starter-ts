@@ -1,0 +1,22 @@
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/common.scss';
+
+.empty-page {
+    background-color: $white;
+    margin: 24px 0;
+    border-radius: 8px;
+    position: relative;
+
+    .info {
+        text-align: center;
+        padding: 118px 50px;
+        .icon {
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 14px;
+            line-height: 16px;
+            margin-top: 8px;
+        }
+    }
+}

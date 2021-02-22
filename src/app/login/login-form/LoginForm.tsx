@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
 import { AppRoute } from 'routing/AppRoute.enum';
+
 import "./LoginForm.scss";
 export class LoginForm extends Component {
+
+    login = () => {
+        localStorage.setItem('logged', JSON.parse("true"));
+    }
 
     render() {
         return (
@@ -22,7 +26,9 @@ export class LoginForm extends Component {
             <input name="password" type="password" placeholder="Enter password" />
                         </label>
                     </div>
-                    <button className="btn normal-blue" type="submit">Log In</button>
+                    <Link to={AppRoute.home}>
+                        <button className="btn normal-blue" type="submit" onClick={this.login}>Log In</button>
+                    </Link>
                     <a href="#">Forgot password?</a>
                 </form>
             </div>

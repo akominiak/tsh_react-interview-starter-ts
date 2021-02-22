@@ -1,0 +1,41 @@
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/common.scss';
+
+.user-wrap {
+    position: relative;
+    height: 100%;
+    width: 48px;
+    .user-profile {
+        position: absolute;
+        top:50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-image: url("../../../assets/images/avatar.png" );
+    }
+    .dropdown {
+        display: none;
+        position: absolute;
+        background-color: $white;
+        top: 75%;
+        right: 0;
+        z-index: 10;
+        height: 56px;
+        width: 184px;
+        border-radius: 4px;
+        box-shadow: 0px 8px 32px 0px rgba(17, 18, 20, 0.15);
+        span {
+            position: absolute;
+            line-height: 26px;
+            width: 100%;
+            padding: 16px 20px;
+            font-size: 14px;
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+}

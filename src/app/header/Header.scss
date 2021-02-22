@@ -4,11 +4,17 @@
 header {
     background-color: $white;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
     a {
         text-decoration: none;
-        .logo {
+        .logo,
+        .profile {
             line-height: 120px;
         }
+    }
+    .profile {
+        line-height: 120px;
     }
 
 }
