@@ -1,5 +1,6 @@
 @import '../../../assets/styles/variables.scss';
 @import '../../../assets/styles/common.scss';
+
 .item {
     border-radius: 8px;
     background-color: $white;
@@ -29,21 +30,18 @@
             margin: 8px 0;
             height: 64px;
         }
-
         .ratio {
             display: flex;
             justify-content: space-between;
             margin: 18px 0;
             width: 38%;
         }
-
         button {
             width: 100%;
             line-height: 38px;
         }
     }
 }
-
 .product-modal {
     display: none;
     &.active {

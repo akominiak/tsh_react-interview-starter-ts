@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "./ProductModal.scss";
 import { ReactComponent as Close } from '../../../../assets/icons/close.svg';
 

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { AppRoute } from 'routing/AppRoute.enum';
-
 import "./LoginForm.scss";
+
 export class LoginForm extends Component {
 
     login = () => {

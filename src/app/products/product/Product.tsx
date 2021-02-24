@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import "./Product.scss";
+import React from 'react';
+import { ProductModal } from './product-modal/ProductModal';
 import { ReactComponent as Star } from "../../../assets/icons/star-regular.svg";
 import { ReactComponent as FilledStar } from "../../../assets/icons/star-orange.svg";
-import { ProductModal } from './product-modal/ProductModal';
+import "./Product.scss";
 
 export const Product = (props: any) => {
     const starRatingScale = 5;
     let filledStars = [];
     for (let i = 0; i < props.product.rating; i++) {
-        filledStars.push(<FilledStar />)
+        filledStars.push(<FilledStar key={i} />)
     }
     for (let i = 0; i < starRatingScale - props.product.rating; i++) {
-        filledStars.push(<Star />)
+        filledStars.push(<Star key={i + props.product.rating} />)
     }
 
     const showDetails = () => {

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { ReactComponent as Search } from '../../../assets/icons/search.svg';
-
 import "./SearchProducts.scss";
 
 interface ComponentProps {
-    onSearch: (value: string) => void;
+    onSearch: (searchText: string, promo: boolean, active: boolean) => void;
 }
+
 export class SearchProducts extends Component<ComponentProps> {
 
     state = {
@@ -14,15 +14,11 @@ export class SearchProducts extends Component<ComponentProps> {
         promo: false
     }
 
-    baseUrl: string = 'https://join-tsh-api-staging.herokuapp.com/';
-    limitPerPage: number = 4;
-    page: number = 1;
-
     handleChange = (e: any) => {
         const checkbox = "checkbox";
         const text = "text";
         const type: any = e.target.type;
-        const name: any = e.target.name;
+        const name: string = e.target.name;
         if (type === text) {
             const value: string = e.target.value;
             this.setState({
@@ -30,34 +26,17 @@ export class SearchProducts extends Component<ComponentProps> {
             }, () => {
                 //setTimeout to prevent quick reloading while user is typing
                 setTimeout(() => {
-                    this.makeQuery();
-                }, 300)
+                    this.props.onSearch(this.state.productsText, this.state.promo, this.state.active);
+                }, 300);
             });
         } else if (type === checkbox) {
             const checked: boolean = e.target.checked;
             this.setState({
                 [name]: checked
             }, () => {
-                this.makeQuery();
+                this.props.onSearch(this.state.productsText, this.state.promo, this.state.active);
             });
         }
-    }
-
-    makeQuery = () => {
-        //creating query from filters
-        let query = this.baseUrl + 'products?';
-        if (this.state.productsText) {
-            query = query + `search=${this.state.productsText}&`;
-        }
-        query = query + `limit=${this.limitPerPage}`;
-        query = query + `&page=${this.page}`;
-        if (this.state.promo) {
-            query = query + `&promo=${this.state.promo}`;
-        }
-        if (this.state.active) {
-            query = query + `&active=${this.state.active}`;
-        }
-        this.props.onSearch(query);
     }
 
     render() {

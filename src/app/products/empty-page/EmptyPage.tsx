@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "./EmptyPage.scss";
 import { ReactComponent as Empty } from '../../../assets/icons/empty.svg';
 
@@ -9,6 +9,5 @@ export const EmptyPage = () => (
             <h3>Ooops… It’s empty here</h3>
             <p>There are no products on the list</p>
         </div>
-
     </div>
 );

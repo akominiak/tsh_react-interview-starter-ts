@@ -1,5 +1,6 @@
 @import '../../../assets/styles/variables.scss';
 @import '../../../assets/styles/common.scss';
+
 nav {
     width: 288px;
     margin: 0 auto;
@@ -9,18 +10,13 @@ nav {
         list-style: none;
         justify-content: space-between;
         li {
-            a {
                 text-decoration: none;
                 font-size: 14px;
                 font-weight: 600;
-                color: $dark-gray;
-
-            }
-            &.current-page{
-                a {
+                color: $dark-gray;    
+                &.current-page{
                     color: $light-blue;
-                }
-            }
+            }   
         }
     }
 }
