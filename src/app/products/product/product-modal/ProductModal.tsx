@@ -1,19 +1,18 @@
 import React from 'react';
-import "./ProductModal.scss";
 import { ReactComponent as Close } from '../../../../assets/icons/close.svg';
+import "./ProductModal.scss";
 
-const handleCLose = () => {
-    let modal: any = document.querySelector('.product-modal');
+const handleCLose = (props: any) => {
+    let modal: any = document.getElementById(props.product.id);
     modal.classList.remove('active');
 }
 export const ProductModal = (props: any) => {
-    //fix it!
     return (
         <div className="modal">
             <section className="modal-main">
                 <div className="modal-container">
                     <div className="btn-wrap">
-                        <button type="button" onClick={handleCLose}>
+                        <button type="button" onClick={() => handleCLose(props)}>
                             <Close />
                         </button>
                     </div>

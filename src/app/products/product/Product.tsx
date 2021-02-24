@@ -15,7 +15,7 @@ export const Product = (props: any) => {
     }
 
     const showDetails = () => {
-        let modal: any = document.querySelector('.product-modal');
+        let modal: any = document.getElementById(props.product.id);
         modal.classList.add('active');
     }
 
@@ -38,7 +38,7 @@ export const Product = (props: any) => {
                 </div>
             </div>
 
-            <div className="product-modal">
+            <div id={props.product.id} className="product-modal">
                 <ProductModal product={props.product} />
             </div>
         </>
