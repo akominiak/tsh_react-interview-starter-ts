@@ -1,30 +1,41 @@
 import { Header } from 'app/header/Header';
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { AppRoute } from 'routing/AppRoute.enum';
+import React, { Component, useEffect } from 'react';
 import { SearchProducts } from './search-products/SearchProducts';
-
-import "./Products.scss";
 import { Product } from './product/Product';
 import { EmptyPage } from './empty-page/EmptyPage';
 import { Pagination } from './pagination/Pagination';
 import { ProductModal } from './product/product-modal/ProductModal';
 import { ReactComponent as Loader } from "../../assets/icons/loader.svg";
+import "./Products.scss";
 
 export class Products extends Component {
+
   state = {
     products: [],
-    isLoaded: false
+    isLoaded: false,
+    query: 'https://join-tsh-api-staging.herokuapp.com/products?limit=4&page=1'
   }
+
   totalPages: number = 20;
   currentPage: number = 1;
+  limitPerPage: number = 4;
+
+  fetchData = () => {
+    //setTimeout to see loader works
+    setTimeout(() => {
+      fetch(this.state.query)
+        .then(response => response.json())
+        .then(response => {
+          this.setState({
+            products: response.items,
+            isLoaded: true
+          })
+        });
+    }, 500);
+  }
 
   componentDidMount() {
-    fetch('https://join-tsh-api-staging.herokuapp.com/products?limit=4&page=1')
-      .then(response => response.json())
-      .then(response => {
-        this.setState({ products: response.items, isLoaded: true })
-      });
+    this.fetchData();
   }
 
   componentDidUpdate() {
@@ -38,6 +49,13 @@ export class Products extends Component {
     }
   }
 
+  handleDataChange = (value: string) => {
+    this.setState({
+      query: value,
+      isLoaded: false
+    }, () => { this.fetchData(); });
+  }
+
   render() {
     const items = this.state.products.map(item => (
       <Product product={item} />
@@ -45,7 +63,7 @@ export class Products extends Component {
     return (
       <>
         <Header isLoginPage={false} />
-        <SearchProducts />
+        <SearchProducts onSearch={this.handleDataChange} />
         { false && <ProductModal />}
         <div className="container">
           {this.state.isLoaded ?

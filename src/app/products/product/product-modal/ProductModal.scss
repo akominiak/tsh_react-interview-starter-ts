@@ -2,14 +2,12 @@
 @import '../../../../assets/styles/common.scss';
 
 .modal {
-  display: none;
     position: fixed;
     top: 0;
     left: 0;
     width:100%;
     height: 100%;
-    background: $black;
-    opacity: 0.5;
+    background: rgba(26, 27, 29, 0.9);
     z-index: 100;
     padding: 24px;
 
@@ -21,10 +19,33 @@
       top:50%;
       left:50%;
       transform: translate(-50%,-50%);
-    }
+      border-radius: 8px;
+      .modal-container{
+        width: 100%;
+        height: auto;
+        .btn-wrap {
+          display: flex;
+          justify-content: flex-end;
+          position: relative;
+          padding: 24px;
+          button {
+            border:none;
+          }
+        }
 
-    &.active {
-      display: block;
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 8px 8px 0 0;
+        }
+        .desc-wrap {
+          padding: 24px;
+          h2 {
+            line-height: 40px;
+            margin-bottom: 8px;
+          }
+        }
+      } 
     }
   }
   

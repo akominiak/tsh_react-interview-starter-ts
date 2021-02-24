@@ -15,6 +15,8 @@ export const Product = (props: any) => {
     }
 
     const showDetails = () => {
+        let modal: any = document.querySelector('.product-modal');
+        modal.classList.add('active');
     }
 
     return (
@@ -34,6 +36,10 @@ export const Product = (props: any) => {
                         <button className="btn normal-blue" onClick={showDetails}>Show details</button> :
                         <button className="btn disabled">Unavailible</button>}
                 </div>
+            </div>
+
+            <div className="product-modal">
+                <ProductModal product={props.product} />
             </div>
         </>
     )

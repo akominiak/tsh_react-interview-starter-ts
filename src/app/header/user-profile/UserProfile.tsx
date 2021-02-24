@@ -9,6 +9,7 @@ const handleUserProfile = () => {
 }
 
 const handleLogout = () => {
+    //simulate logout
     localStorage.setItem('logged', 'false');
 }
 

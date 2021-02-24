@@ -6,6 +6,7 @@ import "./LoginForm.scss";
 export class LoginForm extends Component {
 
     login = () => {
+        //simulate login
         localStorage.setItem('logged', JSON.parse("true"));
     }
 

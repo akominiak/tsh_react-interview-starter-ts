@@ -6,6 +6,7 @@ import { LoginButton } from './login-button/LoginButton';
 import { UserProfile } from './user-profile/UserProfile';
 
 export const Header = (props: any) => {
+    //simulate login
     let isUserAuthorized = localStorage.getItem('logged');
     if (isUserAuthorized !== null)
         isUserAuthorized = JSON.parse(isUserAuthorized);

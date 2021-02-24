@@ -1,12 +1,12 @@
 import React, { Props } from "react"
 import "./Pagination.scss";
 export const Pagination = (props: any) => {
-    //debugger
+
     const pageNumbers = [];
     let paginationLength: number = 8;
     let totalPages = props.totalPages;
     let currentPage = props.currentPage;
-    //ToDO: correct pagination
+
     if (currentPage === 1) {
         if (totalPages - currentPage < paginationLength) {
             for (let i = (totalPages - paginationLength) > 0 ? totalPages - paginationLength : 1; i <= totalPages; i++) {

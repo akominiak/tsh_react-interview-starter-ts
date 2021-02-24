@@ -43,3 +43,10 @@
         }
     }
 }
+
+.product-modal {
+    display: none;
+    &.active {
+        display: block;
+    }
+}
