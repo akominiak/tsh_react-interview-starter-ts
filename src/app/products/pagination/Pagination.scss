@@ -3,7 +3,7 @@
 
 nav {
     width: 288px;
-    margin: 0 auto;
+    margin: 56px auto;
     ul {
         width: 100%;
         display: flex;
@@ -13,7 +13,8 @@ nav {
                 text-decoration: none;
                 font-size: 14px;
                 font-weight: 600;
-                color: $dark-gray;    
+                color: $dark-gray; 
+                cursor: pointer;   
                 &.current-page{
                     color: $light-blue;
             }   

@@ -3,7 +3,6 @@
 
 header {
     background-color: $white;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     a {
@@ -13,7 +12,5 @@ header {
             line-height: 120px;
         }
     }
-    .profile {
-        line-height: 120px;
-    }
+
 }

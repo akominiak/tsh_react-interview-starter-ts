@@ -29,6 +29,7 @@
           padding: 24px;
           button {
             border:none;
+            cursor: pointer;
           }
         }
         img {
@@ -47,3 +48,8 @@
     }
   }
   
+  @media only screen and (min-width: 768px) {
+    .modal-main {
+      max-width: 600px;
+    }
+  }

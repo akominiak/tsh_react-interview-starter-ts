@@ -5,9 +5,13 @@ import "./Login.scss";
 
 export const Login = () => {
   return (
-    <>
-      <Header isLoginPage={true} />
-      <LoginForm />
-    </>
+    <div className="login-page-container">
+      <div className="image">
+      </div>
+      <div className="form-container">
+        <Header isLoginPage={true} />
+        <LoginForm />
+      </div>
+    </div>
   );
 };

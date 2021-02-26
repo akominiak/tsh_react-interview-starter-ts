@@ -1,7 +1,10 @@
 @import '../../../assets/styles/variables.scss';
 @import '../../../assets/styles/common.scss';
 
-.login{
-    height: 38px;
-    width: 88px;
+.btn-wrap {
+    line-height: 120px;
+    .login{
+        height: 38px;
+        width: 88px;
+    }
 }

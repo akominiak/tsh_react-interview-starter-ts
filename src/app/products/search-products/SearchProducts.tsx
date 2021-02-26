@@ -41,7 +41,7 @@ export class SearchProducts extends Component<ComponentProps> {
 
     render() {
         return (
-            <div className="container search-bar">
+            <div className="search-bar">
                 <form>
                     <div className="input-search">
                         <input

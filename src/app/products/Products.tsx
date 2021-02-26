@@ -7,6 +7,10 @@ import { Pagination } from './pagination/Pagination';
 import { ProductModal } from './product/product-modal/ProductModal';
 import { ReactComponent as Loader } from "../../assets/icons/loader.svg";
 import "./Products.scss";
+import { LoginButton } from 'app/header/login-button/LoginButton';
+import { UserProfile } from 'app/header/user-profile/UserProfile';
+import { Link } from 'react-router-dom';
+import { AppRoute } from 'routing/AppRoute.enum';
 
 interface IProduct {
   id: number,
@@ -112,24 +116,40 @@ export class Products extends Component<{}, IProductsState> {
   }
 
   render() {
-    const items: Array<any> = this.state.products.map(item => (
+    const items: Array<JSX.Element> = this.state.products.map(item => (
       <Product key={item.id} product={item} />
     ))
+    //simulate login
+    let isUserAuthorized = localStorage.getItem('logged');
+    if (isUserAuthorized !== null)
+      isUserAuthorized = JSON.parse(isUserAuthorized);
     return (
       <>
-        <Header isLoginPage={false} />
-        <SearchProducts onSearch={this.handleDataChange} />
+        <div className="header-container container">
+          <Header isLoginPage={false} />
+          <SearchProducts onSearch={this.handleDataChange} />
+          <div className="profile">
+            {isUserAuthorized ? <UserProfile /> :
+              <Link to={AppRoute.login}>
+                <LoginButton />
+              </Link>
+            }
+          </div>
+        </div>
         { false && <ProductModal />}
         <div className="container">
           {this.state.isLoaded ?
-            (items.length > 0 ? <>
-              {items}
-              <Pagination
-                totalPages={this.state.totalPages}
-                currentPage={this.state.currentPage}
-                onChangePage={this.handlePageChange}
-              />
-            </> : <EmptyPage />) :
+            (items.length > 0 ?
+              <>
+                <div className="products">
+                  {items}
+                </div>
+                <Pagination
+                  totalPages={this.state.totalPages}
+                  currentPage={this.state.currentPage}
+                  onChangePage={this.handlePageChange}
+                />
+              </> : <EmptyPage />) :
             <div className="loader-wrap">
               <Loader className="loader" />
             </div>}
