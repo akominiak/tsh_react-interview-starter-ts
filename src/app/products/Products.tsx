@@ -5,11 +5,11 @@ import { Product } from './product/Product';
 import { EmptyPage } from './empty-page/EmptyPage';
 import { Pagination } from './pagination/Pagination';
 import { ReactComponent as Loader } from "../../assets/icons/loader.svg";
-import "./Products.scss";
 import { LoginButton } from 'app/header/login-button/LoginButton';
 import { UserProfile } from 'app/header/user-profile/UserProfile';
 import { Link } from 'react-router-dom';
 import { AppRoute } from 'routing/AppRoute.enum';
+import "./Products.scss";
 
 interface IProduct {
   id: number,

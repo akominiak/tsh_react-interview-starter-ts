@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { ProductModal } from './product-modal/ProductModal';
 import { ReactComponent as Star } from "../../../assets/icons/star-regular.svg";
 import { ReactComponent as FilledStar } from "../../../assets/icons/star-orange.svg";
-import "./Product.scss";
 import ReactModal from 'react-modal';
+import "./Product.scss";
 
 ReactModal.setAppElement('body')
 

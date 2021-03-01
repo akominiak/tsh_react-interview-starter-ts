@@ -1,7 +1,6 @@
 import React from 'react';
 import { fireEvent, render } from 'tests';
 import { EmptyPage } from './empty-page/EmptyPage';
-import { Product } from './product/Product';
 import { Products } from './Products';
 
 

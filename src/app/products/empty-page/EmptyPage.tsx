@@ -1,6 +1,6 @@
 import React from 'react';
-import "./EmptyPage.scss";
 import { ReactComponent as Empty } from '../../../assets/icons/empty.svg';
+import "./EmptyPage.scss";
 
 export const EmptyPage = () => (
     <div className="empty-page">
