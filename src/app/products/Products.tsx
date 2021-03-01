@@ -4,7 +4,6 @@ import { SearchProducts } from './search-products/SearchProducts';
 import { Product } from './product/Product';
 import { EmptyPage } from './empty-page/EmptyPage';
 import { Pagination } from './pagination/Pagination';
-import { ProductModal } from './product/product-modal/ProductModal';
 import { ReactComponent as Loader } from "../../assets/icons/loader.svg";
 import "./Products.scss";
 import { LoginButton } from 'app/header/login-button/LoginButton';
@@ -125,7 +124,7 @@ export class Products extends Component<{}, IProductsState> {
       isUserAuthorized = JSON.parse(isUserAuthorized);
     return (
       <>
-        <div className="header-container container">
+        <header className="container">
           <Header isLoginPage={false} />
           <SearchProducts onSearch={this.handleDataChange} />
           <div className="profile">
@@ -135,8 +134,7 @@ export class Products extends Component<{}, IProductsState> {
               </Link>
             }
           </div>
-        </div>
-        { false && <ProductModal />}
+        </header>
         <div className="container">
           {this.state.isLoaded ?
             (items.length > 0 ?

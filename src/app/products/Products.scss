@@ -10,8 +10,7 @@
 .loader{
     animation: spin 2s linear infinite;
 }
-
-.header-container {
+header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -43,8 +42,7 @@
 }
 
 @media only screen and (min-width: 1260px) {
-
-    .header-container {
+    header {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -54,7 +52,6 @@
             .search-bar { order: 2; width: 85%;}
             .profile { order: 3; }
     }
-
     .products {
         .item {
             width: calc(25% - 24px);

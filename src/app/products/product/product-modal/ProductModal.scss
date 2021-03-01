@@ -1,15 +1,6 @@
 @import '../../../../assets/styles/variables.scss';
 @import '../../../../assets/styles/common.scss';
 
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width:100%;
-    height: 100%;
-    background: rgba(26, 27, 29, 0.9);
-    z-index: 100;
-    padding: 24px;
     .modal-main {
       position:fixed;
       background: white;
@@ -35,7 +26,6 @@
         img {
           width: 100%;
           height: auto;
-          border-radius: 8px 8px 0 0;
         }
         .desc-wrap {
           padding: 24px;
@@ -46,8 +36,7 @@
         }
       } 
     }
-  }
-  
+
   @media only screen and (min-width: 768px) {
     .modal-main {
       max-width: 600px;

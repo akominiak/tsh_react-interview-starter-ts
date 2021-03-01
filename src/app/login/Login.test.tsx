@@ -1,9 +1,5 @@
-import { exception } from 'console';
 import React from 'react';
-
 import { render } from 'tests';
-
-import { Login } from './Login';
 import { LoginForm } from './login-form/LoginForm';
 
 describe('Login', () => {

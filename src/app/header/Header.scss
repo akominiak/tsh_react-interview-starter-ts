@@ -1,7 +1,7 @@
 @import '../../assets/styles/variables.scss';
 @import '../../assets/styles/common.scss';
 
-header {
+.head {
     background-color: $white;
     display: flex;
     justify-content: space-between;
@@ -12,5 +12,4 @@ header {
             line-height: 120px;
         }
     }
-
 }

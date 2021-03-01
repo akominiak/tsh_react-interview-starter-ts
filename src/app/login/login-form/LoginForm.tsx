@@ -30,7 +30,7 @@ export class LoginForm extends Component {
                     <Link to={AppRoute.home}>
                         <button className="btn normal-blue" type="submit" onClick={this.login}>Log In</button>
                     </Link>
-                    <a href="#">Forgot password?</a>
+                    <a href="!#">Forgot password?</a>
                 </form>
             </div>
         )

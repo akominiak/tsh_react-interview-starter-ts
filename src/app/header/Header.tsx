@@ -5,10 +5,10 @@ import "./Header.scss";
 
 export const Header = (props: any) => {
     return (
-        <header className={props.isLoginPage ? "container" : ""}>
+        <div className={props.isLoginPage ? "container head" : "head"}>
             <Link to={AppRoute.home}>
                 <div className="logo">join.tsh.io</div>
             </Link>
-        </header >
+        </div>
     );
 };

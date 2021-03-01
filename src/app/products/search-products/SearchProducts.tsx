@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import { ReactComponent as Search } from '../../../assets/icons/search.svg';
 import "./SearchProducts.scss";
 
-interface ComponentProps {
+interface SearchProps {
     onSearch: (searchText: string, promo: boolean, active: boolean) => void;
 }
 
-export class SearchProducts extends Component<ComponentProps> {
-
+export class SearchProducts extends Component<SearchProps> {
     state = {
         productsText: '',
         active: false,
@@ -58,7 +57,7 @@ export class SearchProducts extends Component<ComponentProps> {
                             <input
                                 type="checkbox"
                                 name="active"
-                                className="custom-chckbx"
+                                className="custom-chckbx active"
                                 checked={this.state.active}
                                 onChange={this.handleChange}
                             />
@@ -68,7 +67,7 @@ export class SearchProducts extends Component<ComponentProps> {
                             <input
                                 type="checkbox"
                                 name="promo"
-                                className="custom-chckbx"
+                                className="custom-chckbx promo"
                                 checked={this.state.promo}
                                 onChange={this.handleChange}
                             />
